@@ -11,11 +11,11 @@ import time
 from influxdb import InfluxDBClient
 
 HOSTNAME = "pihole" #Pi-hole hostname to report in InfluxDB for each measurement
-INFLUXDB_SERVER = "influxdb_IP" #IP or hostname to InfluxDB server
+INFLUXDB_SERVER = "192.168.0.112" #IP or hostname to InfluxDB server
 INFLUXDB_PORT = 8086 #Port on InfluxDB server
-INFLUXDB_USER="influxUser" #InfluxDB username to access database with
-INFLUXDB_PASSWORD="influxPass" #InfluxDB password to access database with
-INFLUXDB_DATABASE="DB" #InfluxDB database to push data to
+INFLUXDB_USER="collectdUser" #InfluxDB username to access database with
+INFLUXDB_PASSWORD="collectd" #InfluxDB password to access database with
+INFLUXDB_DATABASE="collectd" #InfluxDB database to push data to
 DELAY = 10 # seconds
 
 def send_msg(domains_blocked, dns_queries_today, ads_percentage_today, ads_blocked_today):
